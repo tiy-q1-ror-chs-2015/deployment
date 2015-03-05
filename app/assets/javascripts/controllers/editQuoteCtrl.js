@@ -1,4 +1,4 @@
-addressBook.controller('editQuoteCtrl', function($location, $scope, quoteData, $routeParams, $q) {
+addressBook.controller('editQuoteCtrl', ['$location', '$scope', 'quoteData', '$routeParams', '$q', function($location, $scope, quoteData, $routeParams, $q) {
   console.log("Inside editQuoteCtrl");
 
   $scope.editQuote = null;
@@ -15,4 +15,4 @@ addressBook.controller('editQuoteCtrl', function($location, $scope, quoteData, $
   $scope.rootPage = function() {
     $location.url('/');
   }
-})
+}])

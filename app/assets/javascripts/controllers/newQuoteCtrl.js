@@ -1,4 +1,4 @@
-addressBook.controller('newQuoteCtrl', function($location, $scope, quoteData) {
+addressBook.controller('newQuoteCtrl', ['$location', '$scope', 'quoteData', function($location, $scope, quoteData) {
   console.log("Inside newQuoteCtrl");
 
   $scope.rootPage = function() {
@@ -17,4 +17,4 @@ addressBook.controller('newQuoteCtrl', function($location, $scope, quoteData) {
     $scope.formQuoteMaster = '';
     $location.url("/")
   };  
-})
+}])

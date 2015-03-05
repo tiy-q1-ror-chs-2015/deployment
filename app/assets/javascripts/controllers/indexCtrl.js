@@ -1,4 +1,4 @@
-var indexCtrl = addressBook.controller('indexCtrl', function($scope, quoteData, $location) {
+var indexCtrl = addressBook.controller('indexCtrl', ['$scope', 'quoteData', '$location', function($scope, quoteData, $location) {
     console.log("Inside indexCtrl");
     $scope.some_text = {quote: "'eeeeeeyyyyyy!", quote_master: "The Fonz"};
     $scope.quotes = quoteData.data;
@@ -21,7 +21,7 @@ var indexCtrl = addressBook.controller('indexCtrl', function($scope, quoteData, 
     $scope.editQuote = function(quoteId) {
       $location.url("/quotes/" + quoteId + "/edit")
     }
-});
+}]);
 
 // var indexCtrl = addressBook.controller('someOtherCtrl', function($scope) {
 //     $scope.some_text = "Welcome to Earth. - Will Smith";

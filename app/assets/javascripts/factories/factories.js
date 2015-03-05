@@ -1,4 +1,4 @@
-addressBook.factory('quoteData', function($http) {
+addressBook.factory('quoteData', ['$http', function($http) {
   quoteData = {
     data: {
       quotes: [
@@ -50,4 +50,4 @@ addressBook.factory('quoteData', function($http) {
   // quoteData.data.quotes[0].quoteMaster
 
   return quoteData;
-})
+}])
