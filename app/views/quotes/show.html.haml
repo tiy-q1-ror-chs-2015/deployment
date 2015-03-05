@@ -6,6 +6,10 @@
 %p
   %b Quote master:
   = @quote.quote_master
+%p
+  = image_tag @quote.image.url
+  = image_tag @quote.image.url(:medium)
+  = image_tag @quote.image.url(:thumb)
 
 = link_to 'Edit', edit_quote_path(@quote)
 \|
