@@ -7,10 +7,9 @@
   %b Quote master:
   = @quote.quote_master
 %p
-  = image_tag @quote.image.url
-  = image_tag @quote.image.url(:medium)
-  = image_tag @quote.image.url(:thumb)
+  / = @quote.s3_url
+  = image_tag @quote.s3_url
 
 = link_to 'Edit', edit_quote_path(@quote)
-\|
+|
 = link_to 'Back', quotes_path
