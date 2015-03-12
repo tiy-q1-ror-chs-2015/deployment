@@ -1,3 +1,20 @@
+# Steps for Heroku Deployment
+
+### Gemfile
+
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
+
+### Terminal
+
+$ bundle install --without production
+
+### Production.rb
+
+  config.assets.compile = true
+
+### Deploy away!
+
 # Steps for Angular App
 
 - Start your rails app
